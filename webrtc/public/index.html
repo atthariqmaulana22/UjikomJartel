@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kelompok 16</title>
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+  
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Kelompok 16</h1>
+    </header>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col">
+          <label for="roomId" class="form-label">Room ID</label>
+          <input id="roomId" type="text" class="form-control" />
+        </div>
+      </div>
+      <p id="notification" class="mt-2"></p>
+    </div>
+
+    <div id="localVideo-container" class="position-fixed bottom-0 end-0 m-3">
+      <video autoplay playsinline muted></video>
+    </div>
+
+    <div id="videos" class="container mt-4">
+      <div id="videoGrid" class="grid-container"></div>
+    </div>
+  </main>
+
+  <footer class="d-flex justify-content-center">
+    <div class="col">
+      <button id="joinBtn" class="btn btn-primary">Masuk</button>
+      <button id="leaveBtn" class="btn btn-danger">Keluar</button>
+    </div>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/webrtc.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

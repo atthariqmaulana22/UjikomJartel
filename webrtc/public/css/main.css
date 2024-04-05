@@ -1,0 +1,84 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(../assets/spdm.jpg);
+  background-size: 1000px;
+  background-position: center;
+
+  color: white; /* Sesuaikan dengan tinggi header Anda */
+  position: relative; /* Diperlukan untuk overlay gradient */
+}
+
+/* Mengatur warna teks di dalam main */
+main {
+  color: white;
+}
+header {
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+
+}
+
+h1 {
+  margin: 0;
+  font-weight: bolder;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto; /* centering the container */
+}
+
+#localVideo-container {
+  max-width: 200px;
+  box-shadow: -2px -2px 15px #888888;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 10px;
+}
+
+.grid-item {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.grid-item video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:none;
+  box-shadow: -2px -2px 15px #888888;
+}
+
+
+footer {
+  position: fixed; 
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  
+  padding: 20px 0;
+}
+
+footer .col {
+  display: flex;
+  justify-content:center; /* Mengatur jarak antara tombol-tombol */
+}
+
+footer button {
+  margin-right: 20px; /* Menambahkan jarak kanan di antara tombol-tombol */
+}

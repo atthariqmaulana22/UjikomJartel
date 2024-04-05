@@ -32,37 +32,6 @@ h1 {
   font-weight: bolder;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto; /* centering the container */
-}
-
-#localVideo-container {
-  max-width: 200px;
-  box-shadow: -2px -2px 15px #888888;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-  gap: 10px;
-}
-
-.grid-item {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-}
-
-.grid-item video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit:none;
-  box-shadow: -2px -2px 15px #888888;
-}
-
 
 footer {
   position: fixed; 
@@ -81,4 +50,48 @@ footer .col {
 
 footer button {
   margin-right: 20px; /* Menambahkan jarak kanan di antara tombol-tombol */
+}
+
+
+#localVideo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparan hitam untuk efek overlay */
+  position:fixed;
+  bottom: 20px;
+  left: 20px;
+  width: calc(50% - 40px); 
+  border-radius: 10px; 
+  overflow: hidden; 
+}
+
+#localVideo-container video {
+  width: 100%; 
+  height: auto; 
+}
+
+#videos {
+  padding: 20px; /* Ruang dalam */
+}
+
+#videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Kolom responsif */
+  gap: 20px; /* Jarak antar item */
+}
+
+.grid-container {
+  border-radius: 10px; 
+  overflow: hidden; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item video {
+  width: 100%; /* Mengisi lebar item */
+  height: auto; /* Menjaga aspek rasio video */
 }
